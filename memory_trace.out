@@ -1,0 +1,38 @@
+[Thread 0] ALLOC (malloc) : Size=1024 bytes | Addr=0x61d8883982a0 | CallerIP=0x7276180ad670
+[Thread 0] FREE (free)    : Size=1024 bytes | Addr=0x61d8883982a0
+[Thread 0] ALLOC (calloc) : Size=1024 bytes | Addr=0x61d8883986b0 | CallerIP=0x7276180ae7c0
+[Thread 0] ALLOC (malloc) : Size=128 bytes | Addr=0x61d888398ac0 | CallerIP=0x7276180ad670
+[Thread 0] FREE (realloc): Size=128 bytes | OldAddr=0x61d888398ac0
+[Thread 0] ALLOC (realloc): Size=512 bytes | NewAddr=0x61d888398ac0 | CallerIP=0x7276180ae0c0
+[Thread 0] FREE (free)    : Size=512 bytes | Addr=0x61d888398ac0
+[Thread 0] ALLOC (malloc) : Size=2048 bytes | Addr=0x61d888398cd0 | CallerIP=0x7276180ad670
+[Thread 0] ALLOC (malloc) : Size=64 bytes | Addr=0x61d8883994e0 | CallerIP=0x7276180ad670
+[Thread 0] FREE (free)    : Size=64 bytes | Addr=0x61d8883994e0
+[ERROR] DOUBLE FREE Detected! Addr=0x61d8883994e0
+
+[THREAD 0 SUMMARY]
+  -> Allocs: 6
+  -> Frees : 5
+  -> Bytes Allocated: 4800 bytes
+  -> Bytes Freed    : 1728 bytes
+
+===========================================================
+               MEMORY ANALYSIS FINAL REPORT                  
+===========================================================
+
+--- GLOBAL STATISTICS ---
+Total Memory Allocated : 4800 bytes
+Total Memory Freed     : 1728 bytes
+Peak Memory Usage      : 3136 bytes
+Memory Leaked          : 3072 bytes
+
+--- ANOMALY DETECTION ---
+Double Frees Detected  : 1
+Invalid Frees Detected : 0
+
+--- MEMORY LEAK SUMMARY ---
+STATUS: LEAKS DETECTED! (2 unfreed blocks)
+  -> Leaked Address: 0x61d888398cd0 | Size: 2048 bytes | CallerIP: 0x7276180ad670
+  -> Leaked Address: 0x61d8883986b0 | Size: 1024 bytes | CallerIP: 0x7276180ae7c0
+
+===========================================================
