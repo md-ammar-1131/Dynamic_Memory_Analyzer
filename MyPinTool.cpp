@@ -566,7 +566,7 @@ UINT64 invalid_frees = 0;
 
 TLS_KEY tls_key = INVALID_TLS_KEY;
 
-// The "Personal Cash Drawer" for each thread
+// The "Personal Cash Drawer" for each thread like in medical shop each medicine compnay or each constituent has its own box or space
 struct ThreadData {
     UINT64 thread_bytes_allocated = 0;
     UINT64 thread_bytes_freed = 0;

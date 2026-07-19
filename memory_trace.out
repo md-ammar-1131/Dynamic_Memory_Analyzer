@@ -1,38 +1,106 @@
-[Thread 0] ALLOC (malloc) : Size=1024 bytes | Addr=0x61d8883982a0 | CallerIP=0x7276180ad670
-[Thread 0] FREE (free)    : Size=1024 bytes | Addr=0x61d8883982a0
-[Thread 0] ALLOC (calloc) : Size=1024 bytes | Addr=0x61d8883986b0 | CallerIP=0x7276180ae7c0
-[Thread 0] ALLOC (malloc) : Size=128 bytes | Addr=0x61d888398ac0 | CallerIP=0x7276180ad670
-[Thread 0] FREE (realloc): Size=128 bytes | OldAddr=0x61d888398ac0
-[Thread 0] ALLOC (realloc): Size=512 bytes | NewAddr=0x61d888398ac0 | CallerIP=0x7276180ae0c0
-[Thread 0] FREE (free)    : Size=512 bytes | Addr=0x61d888398ac0
-[Thread 0] ALLOC (malloc) : Size=2048 bytes | Addr=0x61d888398cd0 | CallerIP=0x7276180ad670
-[Thread 0] ALLOC (malloc) : Size=64 bytes | Addr=0x61d8883994e0 | CallerIP=0x7276180ad670
-[Thread 0] FREE (free)    : Size=64 bytes | Addr=0x61d8883994e0
-[ERROR] DOUBLE FREE Detected! Addr=0x61d8883994e0
+[Thread 0] ALLOC (malloc) : Size=1024 bytes | Addr=0x5d1657f322a0 | CallerIP=0x77c268aad670
+[Thread 0] ALLOC (malloc) : Size=1000 bytes | Addr=0x5d1657f326b0 | CallerIP=0x77c268aad670
+[Thread 0] ALLOC (calloc) : Size=272 bytes | Addr=0x5d1657f32aa0 | CallerIP=0x77c268aae7c0
+[Thread 0] ALLOC (calloc) : Size=272 bytes | Addr=0x5d1657f32bc0 | CallerIP=0x77c268aae7c0
+[Thread 0] ALLOC (calloc) : Size=272 bytes | Addr=0x5d1657f32ce0 | CallerIP=0x77c268aae7c0
+[Thread 0] ALLOC (calloc) : Size=272 bytes | Addr=0x5d1657f32e00 | CallerIP=0x77c268aae7c0
+[Thread 0] ALLOC (calloc) : Size=272 bytes | Addr=0x5d1657f32f20 | CallerIP=0x77c268aae7c0
+[Thread 0] ALLOC (calloc) : Size=272 bytes | Addr=0x5d1657f33040 | CallerIP=0x77c268aae7c0
+[Thread 0] ALLOC (calloc) : Size=272 bytes | Addr=0x5d1657f33160 | CallerIP=0x77c268aae7c0
+[Thread 1] ALLOC (malloc) : Size=600 bytes | Addr=0x77c25c000b70 | CallerIP=0x77c268aad670
+[Thread 5] ALLOC (malloc) : Size=1000 bytes | Addr=0x77c24c000b70 | CallerIP=0x77c268aad670
+[Thread 3] ALLOC (malloc) : Size=800 bytes | Addr=0x77c254000b70 | CallerIP=0x77c268aad670
+[Thread 2] ALLOC (malloc) : Size=700 bytes | Addr=0x77c244000b70 | CallerIP=0x77c268aad670
+[Thread 7] ALLOC (malloc) : Size=1200 bytes | Addr=0x77c23c000b70 | CallerIP=0x77c268aad670
+[Thread 6] ALLOC (malloc) : Size=1100 bytes | Addr=0x77c238000b70 | CallerIP=0x77c268aad670
+[Thread 4] ALLOC (malloc) : Size=900 bytes | Addr=0x77c234000b70 | CallerIP=0x77c268aad670
+[Thread 5] FREE (free)    : Size=1000 bytes | Addr=0x77c24c000b70
+[Thread 2] FREE (free)    : Size=700 bytes | Addr=0x77c244000b70
+[Thread 3] FREE (free)    : Size=800 bytes | Addr=0x77c254000b70
+[Thread 1] FREE (free)    : Size=600 bytes | Addr=0x77c25c000b70
+[Thread 7] FREE (free)    : Size=1200 bytes | Addr=0x77c23c000b70
+[Thread 6] FREE (free)    : Size=1100 bytes | Addr=0x77c238000b70
+[ERROR] INVALID FREE Detected! Addr=0x77c25c0008e0
+[ERROR] INVALID FREE Detected! Addr=0x77c2540008e0
+[ERROR] INVALID FREE Detected! Addr=0x77c24c0008e0
+[Thread 4] FREE (free)    : Size=900 bytes | Addr=0x77c234000b70
+[ERROR] INVALID FREE Detected! Addr=0x77c2440008e0
+
+[THREAD 2 SUMMARY]
+  -> Allocs: 1
+  -> Frees : 2
+  -> Bytes Allocated: 700 bytes
+  -> Bytes Freed    : 700 bytes
+
+[THREAD 1 SUMMARY]
+  -> Allocs: 1
+  -> Frees : 2
+  -> Bytes Allocated: 600 bytes
+  -> Bytes Freed    : 600 bytes
+[ERROR] INVALID FREE Detected! Addr=0x77c23c0008e0
+[ERROR] INVALID FREE Detected! Addr=0x77c2340008e0
+
+[THREAD 3 SUMMARY]
+  -> Allocs: 1
+  -> Frees : 2
+  -> Bytes Allocated: 800 bytes
+  -> Bytes Freed    : 800 bytes
+
+[THREAD 7 SUMMARY]
+  -> Allocs: 1
+  -> Frees : 2
+  -> Bytes Allocated: 1200 bytes
+  -> Bytes Freed    : 1200 bytes
+
+[THREAD 5 SUMMARY]
+  -> Allocs: 1
+  -> Frees : 2
+  -> Bytes Allocated: 1000 bytes
+  -> Bytes Freed    : 1000 bytes
+
+[THREAD 4 SUMMARY]
+  -> Allocs: 1
+  -> Frees : 2
+  -> Bytes Allocated: 900 bytes
+  -> Bytes Freed    : 900 bytes
+[ERROR] INVALID FREE Detected! Addr=0x77c2380008e0
+
+[THREAD 6 SUMMARY]
+  -> Allocs: 1
+  -> Frees : 2
+  -> Bytes Allocated: 1100 bytes
+  -> Bytes Freed    : 1100 bytes
+[Thread 0] FREE (free)    : Size=272 bytes | Addr=0x5d1657f32aa0
+[Thread 0] FREE (free)    : Size=272 bytes | Addr=0x5d1657f32bc0
+[Thread 0] FREE (free)    : Size=272 bytes | Addr=0x5d1657f32ce0
+[Thread 0] FREE (free)    : Size=1000 bytes | Addr=0x5d1657f326b0
 
 [THREAD 0 SUMMARY]
-  -> Allocs: 6
-  -> Frees : 5
-  -> Bytes Allocated: 4800 bytes
-  -> Bytes Freed    : 1728 bytes
+  -> Allocs: 9
+  -> Frees : 4
+  -> Bytes Allocated: 3928 bytes
+  -> Bytes Freed    : 1816 bytes
 
 ===========================================================
                MEMORY ANALYSIS FINAL REPORT                  
 ===========================================================
 
 --- GLOBAL STATISTICS ---
-Total Memory Allocated : 4800 bytes
-Total Memory Freed     : 1728 bytes
-Peak Memory Usage      : 3136 bytes
-Memory Leaked          : 3072 bytes
+Total Memory Allocated : 10228 bytes
+Total Memory Freed     : 8116 bytes
+Peak Memory Usage      : 10228 bytes
+Memory Leaked          : 2112 bytes
 
 --- ANOMALY DETECTION ---
-Double Frees Detected  : 1
-Invalid Frees Detected : 0
+Double Frees Detected  : 0
+Invalid Frees Detected : 7
 
 --- MEMORY LEAK SUMMARY ---
-STATUS: LEAKS DETECTED! (2 unfreed blocks)
-  -> Leaked Address: 0x61d888398cd0 | Size: 2048 bytes | CallerIP: 0x7276180ad670
-  -> Leaked Address: 0x61d8883986b0 | Size: 1024 bytes | CallerIP: 0x7276180ae7c0
+STATUS: LEAKS DETECTED! (5 unfreed blocks)
+  -> Leaked Address: 0x5d1657f33040 | Size: 272 bytes | CallerIP: 0x77c268aae7c0
+  -> Leaked Address: 0x5d1657f32f20 | Size: 272 bytes | CallerIP: 0x77c268aae7c0
+  -> Leaked Address: 0x5d1657f32e00 | Size: 272 bytes | CallerIP: 0x77c268aae7c0
+  -> Leaked Address: 0x5d1657f33160 | Size: 272 bytes | CallerIP: 0x77c268aae7c0
+  -> Leaked Address: 0x5d1657f322a0 | Size: 1024 bytes | CallerIP: 0x77c268aad670
 
 ===========================================================
